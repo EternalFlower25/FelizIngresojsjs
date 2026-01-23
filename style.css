@@ -11,7 +11,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
+    overflow-x: hidden;
+    padding: 10px;
 }
 
 .confetti {
@@ -32,17 +33,22 @@ body {
 
 .music-btn {
     position: fixed;
-    top: 20px;
-    right: 20px;
+    top: 15px;
+    right: 15px;
     background: rgba(255, 255, 255, 0.9);
     border: none;
-    padding: 15px;
+    padding: 12px;
     border-radius: 50%;
     cursor: pointer;
-    font-size: 24px;
+    font-size: 20px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.2);
     transition: transform 0.3s;
     z-index: 1000;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .music-btn:hover {
@@ -56,13 +62,15 @@ body {
 
 .card {
     background: white;
-    padding: 50px;
+    padding: 30px 20px;
     border-radius: 20px;
     box-shadow: 0 20px 60px rgba(0,0,0,0.3);
     max-width: 600px;
+    width: 100%;
     text-align: center;
     position: relative;
     animation: slideIn 1s ease-out;
+    margin: 20px auto;
 }
 
 @keyframes slideIn {
@@ -77,7 +85,7 @@ body {
 }
 
 .graduation-cap {
-    font-size: 80px;
+    font-size: 60px;
     animation: bounce 2s infinite;
 }
 
@@ -88,14 +96,14 @@ body {
 
 h1 {
     color: #667eea;
-    font-size: 42px;
-    margin: 20px 0;
+    font-size: 32px;
+    margin: 15px 0;
     font-weight: bold;
 }
 
 .nombre {
     color: #764ba2;
-    font-size: 48px;
+    font-size: 36px;
     font-weight: bold;
     margin: 10px 0;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
@@ -103,15 +111,25 @@ h1 {
 
 .mensaje {
     color: #555;
-    font-size: 18px;
-    line-height: 1.8;
-    margin: 30px 0;
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 20px 0;
+}
+
+.mensaje p {
+    margin: 8px 0;
+}
+
+.mensaje br {
+    display: block;
+    content: "";
+    margin: 8px 0;
 }
 
 .destacado {
     color: #667eea;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 18px;
 }
 
 .fireworks {
@@ -139,14 +157,122 @@ h1 {
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     color: white;
     border: none;
-    padding: 15px 40px;
-    font-size: 18px;
+    padding: 15px 30px;
+    font-size: 16px;
     border-radius: 50px;
     cursor: pointer;
-    margin-top: 20px;
+    margin-top: 15px;
     transition: transform 0.3s;
+    font-weight: bold;
 }
 
 .btn:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
+}
+
+.btn:active {
+    transform: scale(0.98);
+}
+
+/* Responsive para tablets */
+@media (max-width: 768px) {
+    .card {
+        padding: 25px 18px;
+        margin: 15px;
+    }
+    
+    h1 {
+        font-size: 28px;
+    }
+    
+    .nombre {
+        font-size: 32px;
+    }
+    
+    .mensaje {
+        font-size: 15px;
+    }
+    
+    .destacado {
+        font-size: 17px;
+    }
+}
+
+/* Responsive para móviles */
+@media (max-width: 480px) {
+    body {
+        padding: 5px;
+    }
+    
+    .card {
+        padding: 20px 15px;
+        border-radius: 15px;
+        margin: 10px;
+    }
+    
+    .graduation-cap {
+        font-size: 50px;
+    }
+    
+    h1 {
+        font-size: 26px;
+        margin: 12px 0;
+    }
+    
+    .nombre {
+        font-size: 28px;
+        margin: 8px 0;
+    }
+    
+    .mensaje {
+        font-size: 14px;
+        line-height: 1.5;
+        margin: 15px 0;
+    }
+    
+    .mensaje p {
+        margin: 6px 0;
+    }
+    
+    .destacado {
+        font-size: 16px;
+    }
+    
+    .btn {
+        padding: 12px 25px;
+        font-size: 15px;
+        margin-top: 12px;
+    }
+    
+    .music-btn {
+        top: 10px;
+        right: 10px;
+        padding: 10px;
+        font-size: 18px;
+        width: 45px;
+        height: 45px;
+    }
+}
+
+/* Para móviles muy pequeños */
+@media (max-width: 360px) {
+    .card {
+        padding: 18px 12px;
+    }
+    
+    h1 {
+        font-size: 24px;
+    }
+    
+    .nombre {
+        font-size: 26px;
+    }
+    
+    .mensaje {
+        font-size: 13px;
+    }
+    
+    .graduation-cap {
+        font-size: 45px;
+    }
 }
